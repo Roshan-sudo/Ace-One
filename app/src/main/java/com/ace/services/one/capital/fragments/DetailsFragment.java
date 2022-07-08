@@ -44,22 +44,25 @@ public class DetailsFragment extends Fragment {
         TextView loan_end_date = view.findViewById(R.id.loan_end_date);
 
         // update the UI with relevant values
-        double loanAmount = LoanDetailsActivity.loanDetailsModel.getLoanAmount();
-        loan_acc_no_section.setText(String.valueOf(LoanDetailsActivity.loanDetailsModel.getLoanAccountNo()));
-        loan_amount_section.setText(String.format("INR %s", DECIMAL_FORMAT.format(loanAmount)));
+        if (LoanDetailsActivity.loanDetailsModel != null && LoanDetailsActivity.requestLoanModel != null){
+            double loanAmount = LoanDetailsActivity.loanDetailsModel.getLoanAmount();
+            loan_acc_no_section.setText(String.valueOf(LoanDetailsActivity.loanDetailsModel.getLoanAccountNo()));
+            loan_amount_section.setText(String.format("INR %s", DECIMAL_FORMAT.format(loanAmount)));
+            annual_interest_section.setText(String.format("%s%%", LoanDetailsActivity.requestLoanModel.getInterestRate()));
+
+            // Calculate the "processingFee, gstApplicable, amountDisbursed"
+            double processingFee = loanAmount * LoanDetailsActivity.requestLoanModel.getProcessingFeeRate() / (100.00);
+            double gstApplicable = processingFee * GST_RATE / (100.00);
+            double amountDisbursed = loanAmount - (processingFee + gstApplicable);
+
+            processing_fee_section.setText(String.format("INR %s", DECIMAL_FORMAT.format(processingFee)));
+            gst_applicable_section.setText(String.format("INR %s", DECIMAL_FORMAT.format(gstApplicable)));
+            amount_disbursed.setText(String.format("INR %s", DECIMAL_FORMAT.format(amountDisbursed)));
+        }
+
         emi_amount_section.setText(String.format("INR %s", DECIMAL_FORMAT.format(LoanDetailsActivity.upcomingEmiModel.getDueAmount())));
         loan_end_date.setText(LoanDetailsActivity.upcomingEmiModel.getDueDate());
-        annual_interest_section.setText(String.format("%s%%", LoanDetailsActivity.requestLoanModel.getInterestRate()));
         loan_tenure_section.setText(String.format(Locale.ENGLISH, "%d Months", LoanDetailsActivity.passbookModel.getEmiRemaining()));
-
-        // Calculate the "processingFee, gstApplicable, amountDisbursed"
-        double processingFee = loanAmount * LoanDetailsActivity.requestLoanModel.getProcessingFeeRate() / (100.00);
-        double gstApplicable = processingFee * GST_RATE / (100.00);
-        double amountDisbursed = loanAmount - (processingFee + gstApplicable);
-
-        processing_fee_section.setText(String.format("INR %s", DECIMAL_FORMAT.format(processingFee)));
-        gst_applicable_section.setText(String.format("INR %s", DECIMAL_FORMAT.format(gstApplicable)));
-        amount_disbursed.setText(String.format("INR %s", DECIMAL_FORMAT.format(amountDisbursed)));
 
         return view;
     }
