@@ -51,8 +51,9 @@
             android:id="@+id/img_credit"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_marginLeft="22dp"
+            android:layout_marginStart="22dp"
             android:layout_marginTop="20dp"
+            android:contentDescription="@null"
             android:src="@drawable/credit"
             app:layout_constraintLeft_toLeftOf="@id/cl_credit_summary"
             app:layout_constraintTop_toBottomOf="@id/txtCreditSummary" />
@@ -136,13 +137,12 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginTop="25dp"
+            android:contentDescription="Info"
             android:src="@drawable/ic_error"
             app:layout_constraintHorizontal_bias="0.421"
             app:layout_constraintLeft_toRightOf="@id/txt_used_credit_limit"
             app:layout_constraintRight_toRightOf="@id/cl_credit_summary"
             app:layout_constraintTop_toBottomOf="@id/approved_credit_limit" />
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
@@ -169,10 +169,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:text="All Rights Reserved, Ace Services &amp; Associates, 2022"
+        android:text="@string/copyright"
         android:textColor="#7E7E7E"
         android:textSize="8sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="SmallSp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

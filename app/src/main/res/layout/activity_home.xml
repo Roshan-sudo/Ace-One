@@ -51,6 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="6dp"
         android:layout_marginTop="36dp"
+        android:contentDescription="Profile"
         android:src="@drawable/ic_user"
         app:layout_constraintHorizontal_bias="0.044"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -62,6 +63,7 @@
         android:layout_width="67dp"
         android:layout_height="67dp"
         android:layout_marginTop="36dp"
+        android:contentDescription="Credit"
         android:src="@drawable/credit"
         app:layout_constraintHorizontal_bias="0.044"
         app:layout_constraintLeft_toRightOf="@id/imgProfile"
@@ -72,8 +74,9 @@
         android:id="@+id/imgPassbook"
         android:layout_width="67dp"
         android:layout_height="67dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="36dp"
+        android:contentDescription="Passbook"
         android:src="@drawable/ic_outline_menu_book_24"
         app:layout_constraintHorizontal_bias="0.044"
         app:layout_constraintLeft_toRightOf="@id/imgCredit"
@@ -142,7 +145,8 @@
             android:textColor="#000000"
             android:textSize="9sp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SmallSp" />
 
         <TextView
             android:id="@+id/due_date"
@@ -187,7 +191,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginBottom="12dp"
             android:backgroundTint="#62FD7B"
             android:elevation="3dp"
@@ -197,7 +201,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/due_in" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
@@ -208,6 +211,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/bg_pay_details"
+        android:contentDescription="Advertisement"
         android:padding="2dp"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toTopOf="@id/allRight"
@@ -221,12 +225,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:text="All Rights Reserved, Ace Services &amp; Associates, 2022"
+        android:text="@string/copyright"
         android:textColor="#7E7E7E"
         android:textSize="8sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-
-
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="SmallSp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

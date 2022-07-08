@@ -67,9 +67,9 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:text="OTP Code"
-        android:visibility="gone"
         android:textColor="@color/black"
         android:textSize="14sp"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/otp"
         app:layout_constraintStart_toEndOf="@+id/o_text_img" />
 
@@ -99,11 +99,11 @@
         android:background="@drawable/edit_text_background"
         android:ems="12"
         android:hint="@null"
-        android:visibility="gone"
         android:inputType="number"
         android:textAlignment="center"
         android:textColor="@color/gray"
         android:textSize="16sp"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/subHeading" />
@@ -144,9 +144,9 @@
                 android:layout_height="30dp"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="10dp"
-                android:visibility="gone"
                 android:layout_toEndOf="@+id/textView1"
-                android:indeterminateTint="#404040" />
+                android:indeterminateTint="#404040"
+                android:visibility="gone" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
@@ -156,10 +156,10 @@
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
         android:clickable="true"
-        android:visibility="gone"
         android:elevation="0dp"
         android:focusable="true"
         android:foreground="?android:attr/selectableItemBackground"
+        android:visibility="gone"
         app:cardBackgroundColor="@color/button"
         app:cardCornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="@+id/otp"
@@ -187,9 +187,9 @@
                 android:layout_height="30dp"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="10dp"
-                android:visibility="gone"
                 android:layout_toEndOf="@+id/textView2"
-                android:indeterminateTint="#404040" />
+                android:indeterminateTint="#404040"
+                android:visibility="gone" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 

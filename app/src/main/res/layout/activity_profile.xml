@@ -20,10 +20,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
+        android:id="@+id/helpBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:id="@+id/helpBtn"
         android:layout_marginEnd="36dp"
         android:background="@drawable/roundborder_bg"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,15 +46,14 @@
             android:layout_marginEnd="-5dp"
             android:contentDescription="Help"
             android:src="@drawable/infoimage_foreground" />
-
     </LinearLayout>
-
 
     <ImageView
         android:id="@+id/profilePicImg"
         android:layout_width="111dp"
         android:layout_height="111dp"
         android:background="@drawable/profile_image"
+        android:contentDescription="Profile Picture"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -62,11 +61,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.154" />
 
-
     <LinearLayout
+        android:id="@+id/kycBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/kycBtn"
         android:clickable="true"
         android:focusable="true"
         android:orientation="horizontal"
@@ -85,11 +83,11 @@
             android:textStyle="bold" />
 
         <ImageView
+            android:id="@+id/kycStatusImg"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:id="@+id/kycStatusImg"
             android:layout_gravity="end"
-            android:contentDescription="Profile" />
+            android:contentDescription="@null" />
     </LinearLayout>
 
     <TextView
@@ -104,7 +102,8 @@
         app:layout_constraintHorizontal_bias="0.093"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.333" />
+        app:layout_constraintVertical_bias="0.333"
+        tools:ignore="SmallSp" />
 
     <TextView
         android:id="@+id/name"
@@ -133,7 +132,8 @@
         app:layout_constraintHorizontal_bias="0.094"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="SmallSp" />
 
     <TextView
         android:id="@+id/textView7"
@@ -147,7 +147,8 @@
         app:layout_constraintHorizontal_bias="0.094"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/course"
-        app:layout_constraintVertical_bias="0.095" />
+        app:layout_constraintVertical_bias="0.095"
+        tools:ignore="SmallSp" />
 
     <TextView
         android:id="@+id/textView10"
@@ -161,7 +162,8 @@
         app:layout_constraintHorizontal_bias="0.094"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/course"
-        app:layout_constraintVertical_bias="0.385" />
+        app:layout_constraintVertical_bias="0.385"
+        tools:ignore="SmallSp" />
 
     <TextView
         android:id="@+id/course"
@@ -207,9 +209,10 @@
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="All rights reserved Ace Service Associates, 2022"
+        android:text="@string/copyright"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SmallSp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
