@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RequestLoanActivity">
+
+    <TextView
+        android:id="@+id/txtRequestLoan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="40dp"
+        android:text="Request Loan,"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_loan_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg_pay_details"
+        android:elevation="2dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtRequestLoan">
+
+        <TextView
+            android:id="@+id/txtEMI"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_pay_now"
+            android:gravity="center"
+            android:letterSpacing="0.6"
+            android:text="EMI DETAILS"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/cl_loan_details"
+            app:layout_constraintRight_toRightOf="@id/cl_loan_details"
+            app:layout_constraintTop_toTopOf="@id/cl_loan_details" />
+
+        <TextView
+            android:id="@+id/txtSelectLoanAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Select Loan Amount"
+            android:textColor="#7E7E7E"
+            android:textSize="12sp"
+            app:layout_constraintHorizontal_bias="0.095"
+            app:layout_constraintLeft_toLeftOf="@id/cl_loan_details"
+            app:layout_constraintRight_toRightOf="@id/cl_loan_details"
+            app:layout_constraintTop_toBottomOf="@id/txtEMI" />
+
+        <TextView
+            android:id="@+id/txt_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintHorizontal_bias="0.085"
+            app:layout_constraintLeft_toLeftOf="@id/cl_loan_details"
+            app:layout_constraintRight_toRightOf="@id/cl_loan_details"
+            app:layout_constraintTop_toBottomOf="@id/txtSelectLoanAmount" />
+
+        <TextView
+            android:id="@+id/txt_starting_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="12dp"
+            android:text="INR 0.00"
+            android:textSize="9sp"
+            app:layout_constraintLeft_toLeftOf="@id/cl_loan_details"
+            app:layout_constraintTop_toBottomOf="@id/txt_amount" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:id="@+id/txtMaxAmount"
+            android:layout_marginRight="6dp"
+            android:textSize="9sp"
+            app:layout_constraintRight_toRightOf="@id/cl_loan_details"
+            app:layout_constraintTop_toBottomOf="@id/txt_amount" />
+
+        <SeekBar
+            android:id="@+id/seekbar_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:min="0"
+            android:progress="500"
+            android:thumb="@drawable/bg_thumb"
+            app:layout_constraintLeft_toLeftOf="@id/cl_loan_details"
+            app:layout_constraintRight_toRightOf="@id/cl_loan_details"
+            app:layout_constraintTop_toBottomOf="@id/txt_starting_range" />
+
+        <TextView
+            android:id="@+id/txtSelectTenure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Select Tenure (in Months)"
+            android:textColor="#7E7E7E"
+            android:textSize="12sp"
+            app:layout_constraintHorizontal_bias="0.095"
+            app:layout_constraintLeft_toLeftOf="@id/cl_loan_details"
+            app:layout_constraintRight_toRightOf="@id/cl_loan_details"
+            app:layout_constraintTop_toBottomOf="@id/seekbar_amount" />
+
+        <TextView
+            android:id="@+id/txt_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintHorizontal_bias="0.085"
+            app:layout_constraintLeft_toLeftOf="@id/cl_loan_details"
+            app:layout_constraintRight_toRightOf="@id/cl_loan_details"
+            app:layout_constraintTop_toBottomOf="@id/txtSelectTenure" />
+
+        <TextView
+            android:id="@+id/txt_starting_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="12dp"
+            android:text="0 Months"
+            android:textSize="9sp"
+            app:layout_constraintLeft_toLeftOf="@id/cl_loan_details"
+            app:layout_constraintTop_toBottomOf="@id/txt_time" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="6dp"
+            android:id="@+id/txtMaxTime"
+            android:textSize="9sp"
+            app:layout_constraintRight_toRightOf="@id/cl_loan_details"
+            app:layout_constraintTop_toBottomOf="@id/txt_time" />
+
+        <SeekBar
+            android:id="@+id/seekbar_tenure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:min="0"
+            android:progress="1"
+            android:thumb="@drawable/bg_thumb"
+            app:layout_constraintLeft_toLeftOf="@id/cl_loan_details"
+            app:layout_constraintRight_toRightOf="@id/cl_loan_details"
+            app:layout_constraintTop_toBottomOf="@id/txt_starting_time" />
+
+        <TextView
+            android:id="@+id/txt_processing_fee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:text="Processing Fee (5.00%)"
+            android:textColor="#7F7F7F"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@id/cl_loan_details"
+            app:layout_constraintTop_toBottomOf="@id/seekbar_tenure" />
+
+        <TextView
+            android:id="@+id/processing_fee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginRight="16dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintRight_toRightOf="@id/cl_loan_details"
+            app:layout_constraintTop_toBottomOf="@id/seekbar_tenure" />
+
+        <TextView
+            android:id="@+id/txt_gst_applicable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:text="GST Applicable (18.00%)"
+            android:textColor="#7F7F7F"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@id/cl_loan_details"
+            app:layout_constraintTop_toBottomOf="@id/txt_processing_fee" />
+
+        <TextView
+            android:id="@+id/gst_applicable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginRight="16dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintRight_toRightOf="@id/cl_loan_details"
+            app:layout_constraintTop_toBottomOf="@id/txt_processing_fee" />
+
+        <TextView
+            android:id="@+id/txt_amount_disbursed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:text="Amount disbursed"
+            android:textColor="#7F7F7F"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@id/cl_loan_details"
+            app:layout_constraintTop_toBottomOf="@id/txt_gst_applicable" />
+
+        <TextView
+            android:id="@+id/amount_disbursed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginRight="16dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintRight_toRightOf="@id/cl_loan_details"
+            app:layout_constraintTop_toBottomOf="@id/txt_gst_applicable" />
+
+        <TextView
+            android:id="@+id/txt_emi_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="25dp"
+            android:text="EMI Amount"
+            android:textColor="#7F7F7F"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/cl_loan_details"
+            app:layout_constraintLeft_toLeftOf="@id/cl_loan_details"
+            app:layout_constraintTop_toBottomOf="@id/txt_amount_disbursed" />
+
+        <TextView
+            android:id="@+id/emi_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="25dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/cl_loan_details"
+            app:layout_constraintRight_toRightOf="@id/cl_loan_details"
+            app:layout_constraintTop_toBottomOf="@id/txt_amount_disbursed" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btn_proceed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/bg_proceed"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:text="Proceed"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/allRight"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl_loan_details"
+        app:layout_constraintVertical_bias="0.556" />
+
+    <TextView
+        android:id="@+id/allRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="All Rights Reserved, Ace Services &amp; Associates, 2022"
+        android:textColor="#7E7E7E"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

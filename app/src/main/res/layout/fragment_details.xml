@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_loan_details_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg_pay_details"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txt_loan_acc_no_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:text="Loan Acc. No."
+            android:textColor="#7F7F7F"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@id/cl_loan_details_section"
+            app:layout_constraintTop_toTopOf="@id/cl_loan_details_section" />
+
+        <TextView
+            android:id="@+id/loan_acc_no_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginRight="16dp"
+            android:text="12345678"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintRight_toRightOf="@id/cl_loan_details_section"
+            app:layout_constraintTop_toTopOf="@id/cl_loan_details_section" />
+
+        <TextView
+            android:id="@+id/txt_loan_amount_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Loan Amount"
+            android:textColor="#7F7F7F"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@id/cl_loan_details_section"
+            app:layout_constraintTop_toBottomOf="@id/txt_loan_acc_no_section" />
+
+        <TextView
+            android:id="@+id/loan_amount_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:text="INR 600.00"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintRight_toRightOf="@id/cl_loan_details_section"
+            app:layout_constraintTop_toBottomOf="@id/txt_loan_acc_no_section" />
+
+        <TextView
+            android:id="@+id/txt_annual_interest_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Annual Interest"
+            android:textColor="#7F7F7F"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@id/cl_loan_details_section"
+            app:layout_constraintTop_toBottomOf="@id/txt_loan_amount_section" />
+
+        <TextView
+            android:id="@+id/annual_interest_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:text="10.00%"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintRight_toRightOf="@id/cl_loan_details_section"
+            app:layout_constraintTop_toBottomOf="@id/txt_loan_amount_section" />
+
+        <TextView
+            android:id="@+id/txt_processing_fee_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Processing Fee"
+            android:textColor="#7F7F7F"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@id/cl_loan_details_section"
+            app:layout_constraintTop_toBottomOf="@id/txt_annual_interest_section" />
+
+        <TextView
+            android:id="@+id/processing_fee_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:text="INR 30.00"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintRight_toRightOf="@id/cl_loan_details_section"
+            app:layout_constraintTop_toBottomOf="@id/txt_annual_interest_section" />
+
+        <TextView
+            android:id="@+id/txt_gst_applicable_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="GST Applicable"
+            android:textColor="#7F7F7F"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@id/cl_loan_details_section"
+            app:layout_constraintTop_toBottomOf="@id/txt_processing_fee_section" />
+
+        <TextView
+            android:id="@+id/gst_applicable_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:text="INR 5.40"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintRight_toRightOf="@id/cl_loan_details_section"
+            app:layout_constraintTop_toBottomOf="@id/txt_processing_fee_section" />
+
+        <TextView
+            android:id="@+id/txt_amount_disbursed_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Loan disbursed"
+            android:textColor="#7F7F7F"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@id/cl_loan_details_section"
+            app:layout_constraintTop_toBottomOf="@id/txt_gst_applicable_section" />
+
+        <TextView
+            android:id="@+id/amount_disbursed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="22dp"
+            android:text="INR 564.60"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/cl_loan_details_section"
+            app:layout_constraintRight_toRightOf="@id/cl_loan_details_section"
+            app:layout_constraintTop_toBottomOf="@id/txt_gst_applicable_section" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_loan_details_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="20dp"
+
+        android:background="@drawable/bg_pay_details"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl_loan_details_section">
+
+        <TextView
+            android:id="@+id/txt_loan_tenure_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:text="Loan Tenure"
+            android:textColor="#7F7F7F"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@id/cl_loan_details_2"
+            app:layout_constraintTop_toTopOf="@id/cl_loan_details_2" />
+
+        <TextView
+            android:id="@+id/loan_tenure_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginRight="16dp"
+            android:text="12345678"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintRight_toRightOf="@id/cl_loan_details_2"
+            app:layout_constraintTop_toTopOf="@id/cl_loan_details_2" />
+
+        <TextView
+            android:id="@+id/txt_emi_amount_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="EMI Amount"
+            android:textColor="#7F7F7F"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@id/cl_loan_details_2"
+            app:layout_constraintTop_toBottomOf="@id/txt_loan_tenure_section" />
+
+        <TextView
+            android:id="@+id/emi_amount_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:text="INR 600.00"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintRight_toRightOf="@id/cl_loan_details_2"
+            app:layout_constraintTop_toBottomOf="@id/txt_loan_tenure_section" />
+
+        <TextView
+            android:id="@+id/txt_loan_end_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Loan End Date"
+            android:textColor="#7F7F7F"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@id/cl_loan_details_2"
+            app:layout_constraintTop_toBottomOf="@id/txt_emi_amount_section" />
+
+        <TextView
+            android:id="@+id/loan_end_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="22dp"
+            android:text="10.00%"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/cl_loan_details_2"
+            app:layout_constraintRight_toRightOf="@id/cl_loan_details_2"
+            app:layout_constraintTop_toBottomOf="@id/txt_emi_amount_section" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_loan_details_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg_statement"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl_loan_details_2">
+
+        <TextView
+            android:id="@+id/txt_loan_agreement_letter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Loan Agreement Letter"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/cl_loan_details_3"
+            app:layout_constraintLeft_toLeftOf="@id/cl_loan_details_3"
+            app:layout_constraintTop_toTopOf="@id/cl_loan_details_3" />
+
+        <ImageView
+            android:id="@+id/loan_agreement_letter"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_outline_download_24"
+            app:layout_constraintBottom_toBottomOf="@id/cl_loan_details_3"
+            app:layout_constraintRight_toRightOf="@id/cl_loan_details_3"
+            app:layout_constraintTop_toTopOf="@id/cl_loan_details_3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_loan_details_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg_statement"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl_loan_details_3">
+
+        <TextView
+
+            android:id="@+id/txt_loan_account_statement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Loan Amount Statement"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/cl_loan_details_4"
+            app:layout_constraintLeft_toLeftOf="@id/cl_loan_details_4"
+            app:layout_constraintTop_toTopOf="@id/cl_loan_details_4" />
+
+        <ImageView
+            android:id="@+id/loan_account_statement"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_outline_download_24"
+            app:layout_constraintBottom_toBottomOf="@id/cl_loan_details_4"
+            app:layout_constraintRight_toRightOf="@id/cl_loan_details_4"
+            app:layout_constraintTop_toTopOf="@id/cl_loan_details_4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_loan_details_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg_proceed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl_loan_details_4"
+        app:layout_constraintVertical_bias="0.201">
+
+        <TextView
+            android:id="@+id/txt_foreclose_loan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="Foreclose Loan"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/cl_loan_details_5"
+            app:layout_constraintLeft_toLeftOf="@id/cl_loan_details_5"
+            app:layout_constraintTop_toTopOf="@id/cl_loan_details_5" />
+
+        <ImageView
+            android:id="@+id/foreclose_loan"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/ic_arrow"
+            app:layout_constraintBottom_toBottomOf="@id/cl_loan_details_5"
+            app:layout_constraintRight_toRightOf="@id/cl_loan_details_5"
+            app:layout_constraintTop_toTopOf="@id/cl_loan_details_5" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

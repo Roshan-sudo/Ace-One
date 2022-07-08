@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "264791364914",
+    "firebase_url": "https://ace-one-cc36a-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "ace-one-cc36a",
+    "storage_bucket": "ace-one-cc36a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:264791364914:android:1596c6cab6c9b650e7b32b",
+        "android_client_info": {
+          "package_name": "com.ace.services.one.capital"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "264791364914-1ahevamqdadrdqdvvdi8d9mhn4np7pa7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ace.services.one.capital",
+            "certificate_hash": "715a90338cdfea90e10972d229115599245c5ff5"
+          }
+        },
+        {
+          "client_id": "264791364914-5po2rg4ja2lu9p430j6gkk52fdojp579.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDc2KWuYEEkjLDoqz0St7Ycm68Q98omdHU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "264791364914-5po2rg4ja2lu9p430j6gkk52fdojp579.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreditActivity">
+
+    <TextView
+        android:id="@+id/txtRequestLoan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="40dp"
+        android:text="Credit,"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_credit_summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg_pay_details"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtRequestLoan">
+
+        <TextView
+            android:id="@+id/txtCreditSummary"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_pay_now"
+            android:gravity="center"
+            android:letterSpacing="0.5"
+            android:text="YOUR CREDIT SUMMARY"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@id/cl_credit_summary"
+            app:layout_constraintRight_toRightOf="@id/cl_credit_summary"
+            app:layout_constraintTop_toTopOf="@id/cl_credit_summary" />
+
+        <ImageView
+            android:id="@+id/img_credit"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/credit"
+            app:layout_constraintLeft_toLeftOf="@id/cl_credit_summary"
+            app:layout_constraintTop_toBottomOf="@id/txtCreditSummary" />
+
+        <TextView
+            android:id="@+id/txt_approved_credit_limit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:text="Approved Credit Limit"
+            app:layout_constraintHorizontal_bias="0.118"
+            app:layout_constraintLeft_toRightOf="@id/img_credit"
+            app:layout_constraintRight_toRightOf="@id/cl_credit_summary"
+            app:layout_constraintTop_toBottomOf="@id/txtCreditSummary" />
+
+        <TextView
+            android:id="@+id/approved_credit_limit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#7F7F7F"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0.100"
+            app:layout_constraintLeft_toRightOf="@id/img_credit"
+            app:layout_constraintRight_toRightOf="@id/cl_credit_summary"
+            app:layout_constraintTop_toBottomOf="@id/txt_approved_credit_limit" />
+
+        <TextView
+            android:id="@+id/txt_used_credit_limit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Used Credit Limit"
+            app:layout_constraintHorizontal_bias="0.118"
+            app:layout_constraintLeft_toLeftOf="@id/cl_credit_summary"
+            app:layout_constraintRight_toRightOf="@id/cl_credit_summary"
+            app:layout_constraintTop_toBottomOf="@id/img_credit" />
+
+        <TextView
+            android:id="@+id/used_credit_limit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#FF5349"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0.110"
+            app:layout_constraintLeft_toLeftOf="@id/cl_credit_summary"
+            app:layout_constraintRight_toRightOf="@id/cl_credit_summary"
+            app:layout_constraintTop_toBottomOf="@id/txt_used_credit_limit" />
+
+        <TextView
+            android:id="@+id/txt_able_credit_limit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="able Credit Limit"
+            app:layout_constraintHorizontal_bias="0.118"
+            app:layout_constraintLeft_toLeftOf="@id/cl_credit_summary"
+            app:layout_constraintRight_toRightOf="@id/cl_credit_summary"
+            app:layout_constraintTop_toBottomOf="@id/used_credit_limit" />
+
+        <TextView
+            android:id="@+id/able_credit_limit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="50dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/cl_credit_summary"
+            app:layout_constraintHorizontal_bias="0.110"
+            app:layout_constraintLeft_toLeftOf="@id/cl_credit_summary"
+            app:layout_constraintRight_toRightOf="@id/cl_credit_summary"
+            app:layout_constraintTop_toBottomOf="@id/txt_able_credit_limit" />
+
+        <ImageView
+            android:id="@+id/img_help"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/ic_error"
+            app:layout_constraintHorizontal_bias="0.421"
+            app:layout_constraintLeft_toRightOf="@id/txt_used_credit_limit"
+            app:layout_constraintRight_toRightOf="@id/cl_credit_summary"
+            app:layout_constraintTop_toBottomOf="@id/approved_credit_limit" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/bt_apply_now"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/bg_proceed"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:text="Apply Now"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/allRight"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl_credit_summary"
+        app:layout_constraintVertical_bias="0.27" />
+
+    <TextView
+        android:id="@+id/allRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="All Rights Reserved, Ace Services &amp; Associates, 2022"
+        android:textColor="#7E7E7E"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
